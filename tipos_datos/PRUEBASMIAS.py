@@ -7,3 +7,5 @@ ejemplo.pop()
 ejemplo.pop()
 
 print(ejemplo)
+
+pichi con caca
