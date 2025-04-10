@@ -8,4 +8,16 @@ ejemplo.pop()
 
 print(ejemplo)
 
-pichi con caca
+
+
+
+
+diccionario = {
+"edad":"caca",
+"nombre":"popis"
+}
+
+for elemento in diccionario.items():
+    valor = elemento[0]
+    clave = elemento[1]
+    print(f"Tu nombre es {valor} y {valor} y {valor} yyyyyy {clave}")
