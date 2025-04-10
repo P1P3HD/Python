@@ -42,4 +42,10 @@ for elemento in diccionario.items():
     valor = elemento[1]
     print(f"La clave del dato es: '{clave}' y el valor es: '{valor}'")
 
+conjunto = {"QUE TIRABA EL PIBE",55,True,"HOLA",23}
+
+print()
+for elemento in conjunto:
+    if type(elemento) == str:
+        print(elemento)
 
