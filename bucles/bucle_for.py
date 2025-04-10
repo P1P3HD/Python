@@ -27,3 +27,4 @@ for elemento in enumerate(numeros):
     valor = elemento[1]
     print(f"El índice es: {indice} y el valor es: {valor}")
 
+
