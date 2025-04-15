@@ -8,6 +8,7 @@ diccionario = {
     "estudiante":False
 }
 
+
 for juego in juegos: 
     print(juego) 
 
