@@ -20,9 +20,9 @@ suma(numero_1,numero_2)
 
 # Ejercicio 3
 
-num_1 = int(input("Ingrese su primer número:"))
-num_2 = int(input("Ingrese su segundo número:"))
-operacion =  int(input("Ingrese el tipo de operación que necesita:"))
+num_1 = int(input("Ingrese su primer número: "))
+num_2 = int(input("Ingrese su segundo número: "))
+operacion =  input("Ingrese su operación: ")
 
 # Definir función calculadora
 def calculadora(a,b,op):
