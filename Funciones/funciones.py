@@ -34,9 +34,10 @@ def calculadora(a,b,op):
         resultado = a * b
     elif op == "-":
         resultado = a - b
-    else:
+    elif op == "/":
         if num_2 == 0:
             print("Operación indefinida...")
+            return
         else:
             resultado = a / b
     print(f"El resultado de {a}{op}{b} = {resultado}")
