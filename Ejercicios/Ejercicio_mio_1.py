@@ -1,41 +1,41 @@
 def cak(a):
     a = float(a)
     resultado = a+273.15
-    print(f"Su resultado es {resultado}, considerando su T° {a} convertida de °C a °K.")
+    print(f"Su resultado es {resultado}, considerando su temperatura {a} convertida de °C a °K.")
 
 def kac(a):
     a = float(a)
     resultado = a-273.15
-    print(f"Su resultado es {resultado}, considerando su T° {a} convertida de °K a °C.")
+    print(f"Su resultado es {resultado}, considerando su temperatura {a} convertida de °K a °C.")
 
 def caf(a):
     a = float(a)
     resultado = (a*9/5)+32
-    print(f"Su resultado es {resultado}, considerando su T° {a} convertida de °C a °F.")
+    print(f"Su resultado es {resultado}, considerando su temperatura {a} convertida de °C a °F.")
 
 def fac(a):
     a = float(a)
     resultado = (a-32)*5/9
-    print(f"Su resultado es {resultado}, considerando su T° {a} convertida de °F a °C.")
+    print(f"Su resultado es {resultado}, considerando su temperatura {a} convertida de °F a °C.")
 
 def fak(a):
     a = float(a)
     resultado = (a-32)*5/9+273.15
-    print(f"Su resultado es {resultado}, considerando su T° {a} convertida de °F a °K.")
+    print(f"Su resultado es {resultado}, considerando su temperatura {a} convertida de °F a °K.")
 
 def kaf(a):
     a = float(a)
     resultado = ((a-273.15)*9/5)+32
-    print(f"Su resultado es {resultado}, considerando su T° {a} convertida de °K a °F.")
+    print(f"Su resultado es {resultado}, considerando su temperatura {a} convertida de °K a °F.")
 
 def cac(a):
-    print(f"No puedes convertir la misma T°")
+    print(f"No puedes convertir la misma temperatura")
 
 def faf(a):
-    print(f"No puedes convertir la misma T°")
+    print(f"No puedes convertir la misma temperatura")
 
 def kak(a):
-    print(f"No puedes convertir la misma T°")
+    print(f"No puedes convertir la misma temperatura")
 
 cont = False
 a = ""
@@ -46,7 +46,7 @@ while a.isdigit() == False:
     a = input("Temperatura: ")
 
 print("""
-Escoga su escala de T° inicial deseada:
+Escoga su escala de temperatura inicial deseada:
 
 1) C°
 2) F°
@@ -56,7 +56,7 @@ Escoga su escala de T° inicial deseada:
 inicial = input("Ingrese su opción: ")
 
 print("""
-Escoga su escala de T° final deseada:
+Escoga su escala de temperatura final deseada:
 
 1) C°
 2) F°
