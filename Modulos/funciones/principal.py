@@ -26,6 +26,7 @@ def programa_principal():
         if opcion == "1":
             sub_menu()
             opcion_sub_menu = input("Seleccione su opción (0-3): ")
+
             if opcion_sub_menu == "1":
                 ancho = float(input("Ingrese el ancho: "))
                 largo = float(input("Ingrese el largo: "))
@@ -41,6 +42,7 @@ def programa_principal():
                 return
             else:
                 print("¡Operación inválida!")
+                return
             
         elif opcion == "2":
             pass
