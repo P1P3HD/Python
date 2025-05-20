@@ -1,3 +1,5 @@
+import prettytable
+
 # lista_peliculas = ["Destino Final","Eternauta","Lilo y Stich","Los Piratas del Caribe","El bueno, el malo y el feo"]
 # num = 1
 # for x in lista_peliculas:
@@ -30,5 +32,9 @@ for x in range(len(lista_estudiantes)):
         print(lista_estudiantes[x][0])
 
 for estudiante in lista_estudiantes:
-    print(estudiante[0])
-    
+    suma = 0
+    for i in range(len(estudiante)):
+        suma = suma + estudiante[1][i]
+    promedio = suma / len(estudiante[1])
+    print(f"{estudiante[0]}, Notas:{estudiante[1]}, Promedio: {reound(promedio,1)}")
+    print()
