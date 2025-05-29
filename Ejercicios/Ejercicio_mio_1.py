@@ -42,7 +42,7 @@ a = ""
 
 print("Ingrese su temperatura\n ")
 
-while a.isdigit() == False:
+while a.replace(".", "", 1).isdigit() == False:
     a = input("Temperatura: ")
 
 print("""
@@ -53,16 +53,7 @@ Escoga su escala de temperatura inicial deseada:
 3) K°
 
 """)
-inicial = input("Ingrese su opción1: ")
-
-while cont == False:
-    if inicial.isdigit() == False:
-        inicial = input("Ingrese su opción3: ")
-    else:
-        if inicial == str(1) or inicial == str(2) or inicial == str(3):
-            break
-        else:
-            inicial = input("Ingrese su opción4: ")
+inicial = input("Ingrese su opción: ")
 
 print("""
 Escoga su escala de temperatura final deseada:
@@ -72,7 +63,16 @@ Escoga su escala de temperatura final deseada:
 3) K°
 
 """)
-final = input("Ingrese su opción2: ")
+final = input("Ingrese su opción: ")
+
+while cont == False:
+    if inicial.isdigit() == False:
+        inicial = input("Ingrese su opción: ")
+    else:
+        if inicial == str(1) or inicial == str(2) or inicial == str(3):
+            break
+        else:
+            inicial = input("Ingrese su opción: ")
 
 while cont == False:
     if final.isdigit() == False:
