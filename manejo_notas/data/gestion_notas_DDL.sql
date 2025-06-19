@@ -30,6 +30,6 @@ CREATE TABLE IF NOT EXISTS docentes_asignaturas(
     CONSTRAINT fk_asignaturas FOREIGN KEY (id_asignatura) REFERENCES asignaturas(id)
 );
 
-ALTER TABLE 'docentes' ADD UNIQUE('rut');
-ALTER TABLE 'asignaturas' ADD UNIQUE('codigo');
-ALTER TABLE 'docentes' ADD habilitado TINYINT NOT NULL DEFAULT 1;
+ALTER TABLE `docentes` ADD UNIQUE(`rut`);
+ALTER TABLE `asignaturas` ADD UNIQUE(`codigo`);
+ALTER TABLE `docentes` ADD `habilitado` TINYINT NOT NULL DEFAULT 1;
