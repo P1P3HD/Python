@@ -1,1 +1,1 @@
-asignaturas=['Biología', 'Química', 'Física', 'Matemáticas']
+asignaturas=['Biologia Molecular', 'Quimica', 'Fisica', 'Matematicas', 'Lenguaje', 'Historia']

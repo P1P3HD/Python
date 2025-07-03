@@ -1,7 +1,5 @@
 import mysql.connector
 
-# CTRL + SHIFT + P para cambiar el interpete de python, y ejecutar "pip3 install mysql-connector"
-
 conexion = mysql.connector.connect(
     host='127.0.0.1',
     port=3306,
@@ -12,6 +10,10 @@ conexion = mysql.connector.connect(
 cursor = conexion.cursor()
 
 def ejecutar_consulta(consulta):
-    cursor.execute('SELECT * FROM asignaturas')
+    cursor.execute(consulta)
     resultado = cursor.fetchall()
     return resultado
+
+cursor.execute('SELECT numero_opcion,opcion_menu FROM opciones_menu')
+resultado = cursor.fetchall()
+print(resultado)

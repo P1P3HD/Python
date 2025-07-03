@@ -1,44 +1,16 @@
-from data.asignaturas import lista_asignaturas
-import os
+from data.conexion import ejecutar_consulta
+from prettytable import PrettyTable
 
-print(len(lista_asignaturas))
-print(len("Hola"))
-
-def mostrar_listado_asignatura():
+# READ
+def menu_principal():
     print()
-    print('Lista de Asignaturas')
-    print('====================')
-    contador = 0
-    for asignatura in sorted(lista_asignaturas):
-        contador += 1
-        print(f'{contador}- {asignatura}')
+    print('SISTEMA DE GESTIÓN ASIGNATURAS')
+    opciones_menu = ejecutar_consulta('SELECT numero_opcion,opcion_menu FROM opciones_menu')
+    tabla_menu = PrettyTable()
+    tabla_menu.field_names = ['Id','Opción']
+    for asignatura in opciones_menu:
+        tabla_menu.add_row(asignatura) # type: ignore
+    print(tabla_menu)
+    opcion_usuario = input(f'Seleccione su opción [0-{len(opciones_menu)-1}] :')
 
-def buscar_asignatura():
-    busqueda = input('Ingrese asignatura a buscar: ')
-    for asignatura in lista_asignaturas:
-        if busqueda.lower() in asignatura.lower():
-            return asignatura
-
-def agregar_asignatura():
-    mostrar_listado_asignatura()
-    nueva_asignatura = input('Ingrese nueva asignatura: ')
-    lista_asignaturas.append(nueva_asignatura.title())
-    nombre_archivo = 'asignaturas.py'
-    ruta_relativa = os.path.join('manejo_notas/data', nombre_archivo)
-    ruta_absoluta = os.path.abspath(ruta_relativa)
-    ruta_real = os.path.realpath(ruta_absoluta)
-    archivo_final = open(ruta_real,'w+')
-    archivo_final.write(f'asignaturas={lista_asignaturas}')
-    archivo_final.close()
-    mostrar_listado_asignatura()
-
-def actualizar_asignatura():
-    mostrar_listado_asignatura()
-    busqueda = input('Ingresa asignatura a buscar: ')
-    for i in range(len(lista_asignaturas)):
-        if busqueda.lower() in lista_asignaturas[i].lower():
-            nuevo_dato = input(f'Ingrese nuevo nombre para asignatura {lista_asignaturas[i]}: ')
-            lista_asignaturas[i] = nuevo_dato
-    mostrar_listado_asignatura()
-
-agregar_asignatura()
+menu_principal()
